@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+* 									{ margin: 0; padding: 0; }
+body								{ font: 15px Helvetica, Sans-Serif; } 
+html                                { overflow-y: scroll; }
+#page-wrap							{ width: 720px; margin: 25px auto; } 
+p                                   { margin: 0 0 10px 0; }
+a									{ text-decoration: none; }
+img                                 { vertical-align: middle; }
+a img                               { border: 0; 180}
+ul									{ list-style: none; }
+h1                                  { margin: 0 0 10px 0; }
+
+{
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1invis {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    visibility:hidden;
+}
+
+.column1vis {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    visibility: visible;
+}
+    .column2 {
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+    
+.column3invis {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    visibility: hidden;
+
+}
+
+ .column3vis {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    visibility: visible;
+
+}
+ 
+    
+    .center{
+        display: block;
+        margin-left:auto;
+        margin-right: auto;
+        width:50%
+    }
+    
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.number{font-size: 150%; color: blue}
+    
+.button {
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Georgia;
+}
+.button:hover {background-color: #a8a8a8;}
+    
+.dropbtn {
+    color: dimgrey;
+    padding: 4px;
+    font-size: 14px;
+    border: none;
+    font-family: Georgia;
+    
+}
+
+.dropdown { 
+    left:52%;
+    top: 37%;
+    transform: translate(-50%, -10%);
+    display: inline-block;
+    font-size: 70%;
+    text-align:center;
+}
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {background-color: #a8a8a8;}
+    
+
+.button:hover {background-color: #a8a8a8;}
+
+div.a {text-align:center}
+    
+  .dropdownquarter select {
+        font-family: Georgia;
+        font-weight: bold;
+        background-color: lightgray;
+        color:black;         
+      
+    }
+    
+    .dropdownclient select {
+        font-family: Georgia;
+        font-weight: bold;
+        background-color: white;
+        color:black; 
+        font-size: 80%;
+        
+    }
+    
+   
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.inv {
+    display: none;
+}
+    
+.invi {
+    display: none;
+}
+    
+.invis {
+    display: none;
+}
+    
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+</style>
+ 
+    <!-- NAVBAR STYLE -->
+<style>
+    body {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}</style>
+    
+<!-- THIS IS THE HEADING -->
+<body>
+<!--Logo -->
+        <img src="https://static.wixstatic.com/media/9473e4_76b422d056bc49e7b4350d81b6f34e15~mv2.jpg/v1/fill/w_81,h_80,al_c,q_80,usm_0.66_1.00_0.01/9473e4_76b422d056bc49e7b4350d81b6f34e15~mv2.webp" alt="PaceSetters Technology Logo" style = "float:left;" width="104" height="105">
+    
+<!-- Title -->
+    <h1 style="font-family:Trebuchet MS;" ><b> PACESETTERS TECHNOLOGY</b></h1>
+    
+<!-- Subtitle -->
+    <h2 style="font-family:Trebuchet MS;"> CLIENT SUCCESS REPORTS</h2>
+    <p></p>
+    <br>
+    <hr>
+    
+<!-- Buttons -->
+    <a href="file:///C:/Users/hsnow/Desktop/Pacesetter%20Dashboard/home.html" class="button"><b>Home</b></a>
+    
+    <a href="file:///C:/Users/hsnow/Desktop/Pacesetter%20Dashboard/CompleteSummary.html" class="button"><b>Complete Summary</b></a>
+    
+     <a href="file:///C:/Users/hsnow/Desktop/Pacesetter%20Dashboard/viewbyclient.html" class="button"><b>View by Client</b></a>
+    
+    
+    <hr>
+    <br>
+<div class = "dropdownclient" style="text-align:center;">
+<select id="client">
+        <option value="">Please select a client</option>
+        <option value= "club1">39 Monte Carlo</option>
+        <option value= "club2">Admiral's Cove</option>
+        <option value= "club3">Ansley Golf Club</option>
+        <option value= "club4">Atlantic Golf Club</option>
+        <option value= "club5">BallenIsles</option>
+        <option value= "club6">Bay Head Yacht Club</option>
+        <option value= "club7">Beach Club</option>
+        <option value= "club8">Bel-Air Bay Club</option>
+        <option value= "club9">Bel-Air Country Club</option>
+        <option value= "club10">Birmingham Athletic Club</option>
+        <option value= "club11">Broken Sound Club</option>
+        <option value= "club12">Butterfield Country Club</option>
+        <option value= "club13">Carolina CC</option>
+        <option value= "club14">Chattooga Club</option>
+        <option value= "club15">CMNYC</option>
+        <option value= "club16">CORE: </option>
+        <option value= "club17">DC Ranch</option>
+        <option value= "club18">East Hampton Golf Club</option>
+        <option value= "club19">Emerald Dunes Club</option>
+        <option value= "club20">Epping Forest Yacht Club</option>
+        <option value= "club21">Everglades Club</option>
+        <option value= "club22">Frenchman's Reserve</option>
+        <option value= "club23">Fresh Meadow CC</option>
+        <option value= "club24">Governer's Club</option>
+        <option value= "club25">Hideaway</option>
+        <option value= "club26">Hollyburn</option>
+        <option value= "club27">Ibis Golf and Country Club</option>
+        <option value= "club28">Lakewood Country Club</option>
+        <option value= "club29">Maravilla</option>
+        <option value= "club30">Medinah Country Club</option>
+        <option value= "club31">Mountaintop</option>
+        <option value= "club32">New Seabury </option>
+        <option value= "club33">Pacesetter</option>
+        <option value= "club34">Palma Ceia</option>
+        <option value= "club35">Philadelphia Cricket Club</option>
+        <option value= "club36">Point Grey Golf and Country Club</option>
+        <option value= "club37">Ponte Vedra Inn &amp; Club</option>
+        <option value= "club38">Prestonwood CC</option>
+        <option value= "club39">Riviera Country Club</option>
+        <option value= "club40">Royal Mougins</option>
+        <option value= "club41">Royal Poinciano</option>
+        <option value= "club42">San Antonio CC</option>
+        <option value= "club43">Shady Canyon</option>
+        <option value= "club44">South Hampton</option>
+        <option value= "club45">St. James Plantation</option>
+        <option value= "club46">The Belfair</option>
+        <option value= "club47">The Bridges at Rancho Santa Fe</option>
+        <option value= "club48">The Cliffs</option>
+        <option value= "club49">The Lodge &amp; Club</option>
+        <option value= "club50">The London Club</option>
+        <option value= "club51">The Madison Club</option>
+        <option value= "club52">The Olympic Club</option>
+        <option value= "club53">The Plantation</option>
+        <option value= "club54">The River Club</option>
+        <option value= "club55">Trinity Forest</option>
+        <option value= "club56">Turnberry Isle - Miami</option>
+        <option value= "club57">Union Club of NY</option>
+        <option value= "club58">Union League of Philadelphia</option>
+        <option value= "club59">Williams Island</option>
+        </select>
+            </div>
+    
+    <div class="a" style="font-size:70%">
+        <br>
+        <h>Please select up to 2 quarters to compare.
+        </h></div>
+    
+ </body> 
+    
+<!--QUARTER SELECT -->
+    <div class="row" style="font-size:60%">
+  <div class="column2" style="background-color:white;">
+      <br>
+       <div class = "dropdownquarter" style="text-align: center">    
+      
+      <select id="quarter1">
+        <option value="">Please Select</option>
+        <option value="content_1">Quarter 2 2017</option>
+        <option value="content_2" >Quarter 3 2017</option>
+        <option value="content_3" >Quarter 4 2017</option>
+        <option value="content_4" >Quarter 1 2018</option>
+        <option value="content_5" >Quarter 2 2018</option>
+    </select>
+     </div>
+      <br>
+      <br>
+   
+  </div>
+  
+
+    <div class="column2" style="background-color:white;">
+       <div class = "dropdownquarter" style="text-align: center">   
+     <br>
+           <select id="quarter2">
+        <option value="">Please Select</option>
+        <option value="content_6">Quarter 2 2017</option>
+        <option value="content_7">Quarter 3 2017</option>
+        <option value="content_8">Quarter 4 2017</option>
+        <option value="content_9" >Quarter 1 2018</option>
+        <option value="content_10">Quarter 2 2018</option>
+    </select>
+         </div>
+        <br>
+        <br>
+    </div>
+</div>
+
+
+<!-- Club name-->
+<div style="background-color:mediumaquamarine;color:white;padding:20px;text-align: center" >
+        <div id ="club1" class="invis" style="text-align:center;font-weight:bold;font-size:150%">39 Monte Carlo</div>
+        <div id ="club2" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Admiral's Cove</div>
+        <div id ="club3" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Ansley Golf Club</div>
+        <div id ="club4" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Atlantic Golf Club</div>
+        <div id ="club5" class="invis" style="text-align:center;font-weight:bold;font-size:150%">BallenIsles</div>
+        <div id ="club6" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Bay Head Yacht Club</div>
+        <div id ="club7" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Beach Club</div>
+        <div id ="club8" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Bel-Air Bay Club</div>
+        <div id ="club9" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Bel-Air Country Club</div>
+        <div id ="club10" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Birmingham Athletic Club</div>
+        <div id ="club11" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Broken Sound Club</div>
+        <div id ="club12" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Butterfield Country Club</div>
+        <div id ="club13" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Carolina CC</div>
+        <div id ="club14" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Chattooga Club</div>
+        <div id ="club15" class="invis" style="text-align:center;font-weight:bold;font-size:150%">CMNYC</div>
+        <div id ="club16" class="invis" style="text-align:center;font-weight:bold;font-size:150%">CORE: </div>
+        <div id ="club17" class="invis" style="text-align:center;font-weight:bold;font-size:150%">DC Ranch</div>
+        <div id ="club18" class="invis" style="text-align:center;font-weight:bold;font-size:150%">East Hampton Golf Club</div>
+        <div id ="club19" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Emerald Dunes Club</div>
+        <div id ="club20" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Epping Forest Yacht Club</div>
+        <div id ="club21" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Everglades Club</div>
+        <div id ="club22" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Frenchman's Reserve</div>
+        <div id ="club23" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Fresh Meadow CC</div>
+        <div id ="club24" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Governer's Club</div>
+        <div id ="club25" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Hideaway</div>
+        <div id ="club26" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Hollyburn</div>
+        <div id ="club27" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Ibis Golf and Country Club</div>
+        <div id ="club28" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Lakewood Country Club</div>
+        <div id ="club29" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Maravilla</div>
+        <div id ="club30" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Medinah Country Club</div>
+        <div id ="club31" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Mountaintop</div>
+        <div id ="club32" class="invis" style="text-align:center;font-weight:bold;font-size:150%">New Seabury </div>
+        <div id ="club33" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Pacesetter</div>
+        <div id ="club34" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Palma Ceia</div>
+        <div id ="club35" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Philadelphia Cricket Club</div>
+        <div id ="club36" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Point Grey Golf and Country Club</div>
+        <div id ="club37" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Ponte Vedra Inn &amp; Club</div>
+        <div id ="club38" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Prestonwood CC</div>
+        <div id ="club39" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Riviera Country Club</div>
+        <div id ="club40" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Royal Mougins</div>
+        <div id ="club41" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Royal Poinciano</div>
+        <div id ="club42" class="invis" style="text-align:center;font-weight:bold;font-size:150%">San Antonio CC</div>
+        <div id ="club43" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Shady Canyon</div>
+        <div id ="club44" class="invis" style="text-align:center;font-weight:bold;font-size:150%">South Hampton</div>
+        <div id ="club45" class="invis" style="text-align:center;font-weight:bold;font-size:150%">St. James Plantation</div>
+        <div id ="club46" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Belfair</div>
+        <div id ="club47" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Bridges at Rancho Santa Fe</div>
+        <div id ="club48" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Cliffs</div>
+        <div id ="club49" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Lodge &amp; Club</div>
+        <div id ="club50" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The London Club</div>
+        <div id ="club51" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Madison Club</div>
+        <div id ="club52" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Olympic Club</div>
+        <div id ="club53" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The Plantation</div>
+        <div id ="club54" class="invis" style="text-align:center;font-weight:bold;font-size:150%">The River Club</div>
+        <div id ="club55" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Trinity Forest</div>
+        <div id ="club56" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Turnberry Isle - Miami</div>
+        <div id ="club57" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Union Club of NY</div>
+        <div id ="club58" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Union League of Philadelphia</div>
+        <div id ="club59" class="invis" style="text-align:center;font-weight:bold;font-size:150%">Williams Island</div>
+
+   
+</div>
+    
+
+<!-- NAVBAR -->
+<div id="navbar">
+  <div class="row">
+  <div class="column2" style="background-color:black;color: white">
+    <br>
+        <div id="content_1" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 2 2017</div>
+        <div id="content_2" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 3 2017</div>
+        <div id="content_3" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 4 2017</div>
+        <div id="content_4" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 1 2018</div>
+        <div id="content_5" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 2 2018</div>
+      </div>
+    
+    <div class="column2" style="background-color:black;color: white">
+      <br>
+    
+        <div id="content_6" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 2 2017</div>
+        <div id="content_7" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 3 2017</div>
+        <div id="content_8" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 4 2017</div>
+        <div id="content_9" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 1 2018</div>
+        <div id="content_10" class="inv" style="text-align: center;font-weight: bold;font-size: 150%">Quarter 2 2018</div>
+      </div>
+    </div>
+    </div>
+    
+<!--Black box-->
+     <div class="row">
+  <div class="column1invis" style="background-color:black;color:white">
+    <br>
+      
+      <br>
+      <div id='people'>
+          <img src="https://cdn4.iconfinder.com/data/icons/infographics-1-1/512/people_25-512.png" height=100 align="middle" class="center">
+          </div>
+      <div style="font-size:60%">
+        <p style="text-align:center"><b><span class='number'>3553</span> members</b></p>
+      <p style="text-align:center"><b><span class='number'>1184</span> app users</b></p>
+      <p style="text-align:center"><b><i>(25% of all members)</i></b></p>
+      <br>
+      <hr>
+      <br>
+        <p style="text-align:center"><b><span class='number'>20</span> new downloads this quarter</b></p>
+          <br>
+          </div>
+  </div>
+  
+<div class="column3invis" style="background-color:black;color: white">
+      <br>
+          <br>
+          <img src="https://cdn4.iconfinder.com/data/icons/infographics-1-1/512/people_25-512.png" height=100 align="middle" class="center">
+    <div style="font-size:60%">
+        <p style="text-align:center"><b><span class='number'>3553</span> members</b></p>
+      <p style="text-align:center"><b><span class='number'>1184</span> app users</b></p>
+      <p style="text-align:center"><b><i>(25% of all members)</i></b></p>
+      <br>
+      <hr>
+      <br>
+        <p style="text-align:center"><b><span class='number'>20</span> new downloads this quarter</b></p>
+        <br>
+        </div>
+  </div>
+</div>  
+    
+    
+    <!--Launches-->
+  <div class="row" style="font-size:60%">
+  <div class="column1invis" style="background-color:#aaa;">
+      <br>
+     <h2 style="text-align: center"> 
+        App Launches
+        </h2>
+          <br>
+      <div id='graph'>
+          <img src="https://datavizcatalogue.com/methods/images/top_images/line_graph.png" width="400px" align="middle" class="center">
+          </div>
+          <br>
+        <p style="text-align:center"><b><span class='number'>3553</span> launches</b></p>
+      <br>
+      <br>
+      <br>
+        <p style="text-align:center"><b><span class='number'>35.53</span> launches per member</b></p>
+      <div style="font-size:90%"><br><br></div>
+  </div>
+  
+
+    <div class="column3invis" style="background-color:#bbb;">
+        <br>
+         <h2 style="text-align: center"> 
+        App Launches </h2>
+          <br>
+          <img src="https://datavizcatalogue.com/methods/images/top_images/line_graph.png" width="400px" align="middle" class="center">
+          <br>
+        <p style="text-align:center"><b><span class='number'>4708</span> launches</b></p>
+        
+        <p style="text-align:center;color:greenyellow;font-size:24px"><b>+30%</b></p>
+        <br>
+
+        <p style="text-align:center"><b><span class='number'>31.39</span> launches per member</b></p>
+        <p style="text-align:center;color:firebrick;font-size:24px"><b>-12%</b></p>
+    </div>
+</div>
+
+    <!--Features-->
+     <div class="row">
+  <div class="column1invis" style="background-color:black;color: white">
+      <div style="font-size:65%">
+          <br>
+
+      <h3 style="text-align: center"><u>Top 5 Features</u></h3>
+            <div style="font-size:30%"> <br> </div>
+        <p>1. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>2. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>3. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>4. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>5. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+          <br>
+  </div>
+         </div>
+  
+    <div style="font-size:65%">
+    <div class="column3invis" style="background-color:black; color:white">
+         <br>
+      <h3 style="text-align: center"><u>Top 5 Features</u></h3>
+             <div style="font-size:30%"> <br> </div>
+          <p>1. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>2. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>3. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>4. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <p>5. Feature </p>
+      <p style="text-indent: 50px">255 uses</p>
+        <br>
+  </div>
+</div>   
+    </div>
+    
+    <!--Impressions-->
+<div class="row" style="font-size:60%">
+  <div class="column1invis" style="background-color:#aaa;">
+      <br>
+    <h2 style="text-align: center">Impressions</h2>
+          <br>
+          <img src="https://datavizcatalogue.com/methods/images/top_images/line_graph.png" width="400px" align="middle" class="center">
+          <br>
+        <p style="text-align:center"><b><span class='number'>3553</span> impressions</b></p>
+      <br>
+      <br>
+      <br>
+        <p style="text-align:center"><b><span class='number'>35.53</span> impressions per member</b></p>
+      <div style="font-size:180%"><br></div>
+  </div>
+  
+
+    <div class="column3invis" style="background-color:#bbb;">
+        <br>
+        <h2 style="text-align: center">Impressions</h2>
+          <br>
+          <img src="https://datavizcatalogue.com/methods/images/top_images/line_graph.png" width="400px" align="middle" class="center">
+          <br>
+        <p style="text-align:center"><b><span class='number'>4708</span> impressions</b></p>
+        
+        <p style="text-align:center;color:greenyellow;font-size:24px"><b>+30%</b></p>
+        <br>
+
+        <p style="text-align:center"><b><span class='number'>31.39</span> impressions per member</b></p>
+        <p style="text-align:center;color:firebrick;font-size:24px"><b>-12%</b></p>
+    </div>
+    </div>
+    
+
+    <!-- COMPARISON REPORT!-->
+<div style="background-color:mediumaquamarine;color:white;padding:20px;text-align: center">
+  <button><a href="https://www.w3schools.com" style="font-size:17px;color:black;padding:10px;">Print comparison report</a></button>
+    
+</div> 
+  
+    
+<!-- SCRIPTS -->
+<script></script>
+<script>
+    var maxHeight = 400;
+
+$(function(){
+
+    $(".dropdown > li").hover(function() {
+    
+         var $container = $(this),
+             $list = $container.find("ul"),
+             $anchor = $container.find("a"),
+             height = $list.height() * 1.1,       // make sure there is enough room at the bottom
+             multiplier = height / maxHeight;     // needs to move faster if list is taller
+        
+        // need to save height here so it can revert on mouseout            
+        $container.data("origHeight", $container.height());
+        
+        // so it can retain it's rollover color all the while the dropdown is open
+        $anchor.addClass("hover");
+        
+        // make sure dropdown appears directly below parent list item    
+        $list
+            .show()
+            .css({
+                paddingTop: $container.data("origHeight")
+            });
+        
+        // don't do any animation if list shorter than max
+        if (multiplier > 1) {
+            $container
+                .css({
+                    height: maxHeight,
+                    overflow: "hidden"
+                })
+                .mousemove(function(e) {
+                    var offset = $container.offset();
+                    var relativeY = ((e.pageY - offset.top) * multiplier) - ($container.data("origHeight") * multiplier);
+                    if (relativeY > $container.data("origHeight")) {
+                        $list.css("top", -relativeY + $container.data("origHeight"));
+                    };
+                });
+        }
+        
+    }, function() {
+    
+        var $el = $(this);
+        
+        // put things back to normal
+        $el
+            .height($(this).data("origHeight"))
+            .find("ul")
+            .css({ top: 0 })
+            .hide()
+            .end()
+            .find("a")
+            .removeClass("hover");
+    
+    });
+    
+    // Add down arrow only to menu items with submenus
+    $(".dropdown > li:has('ul')").each(function() {
+        $(this).find("a:first").append("<img src='images/down-arrow.png' />");
+    });
+    
+});
+    </script>
+    
+<script>
+
+ document
+                .getElementById('quarter1')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var vis = document.querySelector('.vis'),   
+                        target = document.getElementById(this.value);
+                    if (vis !== null) {
+                        vis.className = 'inv';
+                    }
+                    if (target !== null ) {
+                        target.className = 'vis';
+                    }
+            });
+    
+   
+    
+     document
+    .getElementById('quarter2')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var visi = document.querySelector('.visi'),   
+                        target = document.getElementById(this.value);
+                    if (visi !== null) {
+                        visi.className = 'invi';
+                    }
+                    if (target !== null ) {
+                        target.className = 'visi';
+                    }
+            })
+    
+       document
+    .getElementById('client')
+                .addEventListener('change', function () {
+                    'use strict';
+                    var visib = document.querySelector('.visib'),   
+                        target = document.getElementById(this.value);
+                    if (visib !== null) {
+                        visib.className = 'invis';
+                    }
+                    if (target !== null ) {
+                        target.className = 'visib';
+                    }
+            })
+
+            
+</script>
+
+<!-- NAVBAR SCRIPT-->
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+        
+<script>
+    
+$('#quarter1').click(function() {
+    $('.column1invis').toggleClass('column1vis');
+    $('.column1invis').addClass('column1vis');
+});
+    
+$('#quarter2').click(function() {
+    $('.column3invis').toggleClass('column3vis');
+    $('.column3invis').addClass('column3vis');
+});
+ 
+    
+    </script>
+
+    </body>
+</html>
+
+
